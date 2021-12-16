@@ -1,0 +1,196 @@
+/* Style général de la barre SIP */
+
+/* Définition générales de la page */
+html {
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Trebuchet MS";    /* Changement de la police d'écriture */
+    font-weight: bolder;            /* Changement de la police en gras */
+    margin: 0;
+}
+
+
+/* Paramètres généraux pour la barre grise */
+.barre-sip {
+    position: absolute;
+    z-index: 999;
+    font-size: large;
+    display: flex;                /* Transformation en flexbox */
+    padding: 0;                   /* Suppression des marges internes */
+    background-color: #d0e9f4;    /* Ajout de la couleur d'arrière-plan */
+    justify-content: space-around;/* Alignements des liens dans le menu */
+
+    height: 2.9rem; /* Définition de la hauteur en rem et non pas en vh pour éviter des effets indésirables sur les écrans */
+
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+ 
+/* Suppression des puces */
+.barre-sip li {
+    list-style-type: none;      
+}
+
+
+/* Définition de la couleur des liens */
+.barre-sip a.actif {    
+    color: grey;
+    border-color: grey;
+}
+
+
+/* Changement de la couleur des liens au survol de la souris */
+.lien-appli:hover {
+    background-color: #845ec2;
+    color: white;
+    border-color: white;
+}
+
+
+/* Largeur du bouton d'ouverture du menu des applications */
+#bouton-app {
+    width:100%;
+}
+
+
+/* Div entourant l'icone du menu d'applications */
+.icone-menu {
+    margin: 0;
+    margin-top: -0.1%;
+    margin-left: -2.5%;
+    width: 3rem;
+}
+
+
+/* Première appication favorite */
+#premiere-app-fav {
+    margin-left: -6%;
+}
+
+
+/* Li contenant les applications favorites */
+.element-favori {
+    width: 2%;
+    
+    margin: 0;
+    padding: 0;
+    margin-top: 0.2%;
+}
+
+
+/* Zone de drop des applications */
+.zone-depot {
+    width: 120px;
+    height: 25px;
+
+    border: none;
+
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+/* Div entourant le input */
+.search-bar {
+    width: 25%;
+    margin-top: 0.2%;
+}
+
+
+/* Input de recherche */
+#search-bar {
+    width: 100%;
+    height: 4vh;
+    font-size: large;
+    border-radius: 14px;
+}
+
+
+/* Changement de couleur lors du focus */
+#search-bar:focus {
+    border-style: solid;
+    border-color: #FFF;
+}
+
+
+/* Bouton de notification */
+#bouton-notification {
+    width: 80%;
+    margin-top: 8%;
+}
+
+
+/* Lors du hover de la notif */
+#bouton-notification:hover {
+    border: 3px solid white;
+    border-radius: 14px;
+    width: 85%;
+}
+
+
+/* Lors du hover du bouton deco */
+#bouton-profil:hover {
+    border: 3px solid white;
+    border-radius: 50px;
+}
+
+
+/* Icone de déconnexion de l'agent */
+.icone {
+    width: 100%;
+}
+
+
+/* Correspond aux div entourant les boutons de déconnexion et d'accès au profil de l'agent */
+.lien {
+    width: 2%; 
+
+    margin: 0;
+    padding: 0;
+    padding-top: 0.2%;
+}
+
+
+/* Modifications des positions des éléments de la barre */
+#barre-de-recherche {
+    margin-right: -6%;
+}
+
+#notif {
+    margin-right: -2%;
+}
+
+#deco {
+    margin-right: -5%;
+}
+
+#profil {
+    margin-right: -2.5%;
+}
+
+
+/* Bouton de messagerie qui sera implémentée dans une v2 */
+#bouton-messagerie {
+    width: 3%;
+
+    position: absolute;
+    right: 0.3%;
+    bottom: 1%;
+    
+    z-index: 10;
+}

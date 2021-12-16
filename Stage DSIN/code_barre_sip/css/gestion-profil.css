@@ -1,0 +1,50 @@
+/* Cette page contient les éléments concernant le menu du profil de l'agent */
+
+/* Div encadrant le menu de gestion du profil de l'agent */
+#menu-profil {
+    background-color: #d0e9f4;
+    border-radius: 0px 0px 0px 17px; /* Border radius uniquement pour l'angle inférieur gauche */
+    
+    position: absolute;
+    right: -279px;
+    top: 5vh;
+    width: 14.5%;
+    z-index: 99;
+
+    transition: transform 0.6s ease-in-out; /* Animation lors du clic */
+}
+
+
+/* Croix de fermeture du menu de gestion du profil */
+#croix-2 {
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+}
+
+
+/* Partie supérieure du menu de gestion du profil avec le nom et la photo de profil de l'agent */
+.detail-agent {
+    margin-left: 4%;
+}
+
+
+/* Correspond à la photo de profil de l'agent */
+#image-profil {
+    width: 20%;
+    vertical-align: middle;
+}
+
+
+/* Correspond au nom de l'agent */
+#nom-agent {
+    background-color: #1784A2;  /* Arrière-plan */
+    color: white;
+    padding: 2%;
+    border: 3px solid #fff;
+    border-radius: 4px;;
+    display: inline-block;
+    font-size: large;
+    margin-left: 5%;
+}

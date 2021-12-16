@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test avec liste</title>
+</head>
+<body>
+    <!-- Premier essai -->
+    <style>
+        body{
+            position: absolute;
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style-type: none; 
+            border: solid 3px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+    
+        li {
+            border: solid red 1px;
+        }
+    
+        #premier_essai {
+            display: flex;
+        }
+    </style>
+    <ul id="premier_essai">
+        <li>Elément 1</li>
+        <li>Elément 2</li>
+        <li>Elément 3</li>
+        <li>Elément 4</li>
+        <li>Elément 5</li>
+    </ul>
+
+    <!-- Second essai -->
+    <style>
+        #second_essai {
+        top: 5rem;
+        left: 2rem;
+
+        width: 90%;
+    }
+
+    #second_essai li {
+        width: 8rem;
+
+        display: inline-block;
+    }
+
+    #t2 {
+        width: 80%;
+    }
+    li div {
+        display: inline-block;
+    }
+    </style>
+    <ul id="second_essai">
+        <li id="t1">Elément 1</li>
+        <li id="t2">
+            <div> 
+                <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+              </div>
+
+              <div> 
+                <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+              </div>
+
+              <div> 
+                <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+              </div>
+        </li>
+        <li id="t3">Elément 3</li>
+        <li id="t4">Elément 4</li>
+        <li id="t5">Elément 5</li>
+    </ul>
+
+    <!-- Troisième essai -->
+    <style>
+        #essai_3 {
+            border: solid 3px;
+            padding: 5px; 
+
+            position: relative;
+            top: 10rem;
+            left: 2rem;
+        }
+
+        #essai_3 div {
+            border: solid 2px;
+            background-color: red;
+            width:fit-content;
+            padding: 2px;
+
+            display: inline-block;
+
+            position: relative;
+            top: 0;
+        }
+
+        #dernier {
+            right: 0;
+        }
+    </style>
+    <div id="essai_3">
+        <div id="premier"> 
+            <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+        </div>
+
+        <div id="deuxieme"> 
+            <div>Test</div>
+            <div>Test</div>
+            <div>Test</div>
+        </div>
+
+        <div id="dernier"> 
+            <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+        </div>
+    </div>
+
+    <!-- Quatrième essai -->
+    <style>
+        #essai_4 {
+            border: solid 3px;
+            padding: 5px; 
+
+            position: relative;
+            top: 12rem;
+            left: 2rem;
+        }
+
+        #essai_4 li {
+            background-color: orange;
+
+            display: inline-block;
+        }
+
+        #essai_4 li div {
+            border: solid 2px;
+            background-color: red;
+            width:fit-content;
+            padding: 2px;
+
+            display: inline-block;
+
+            position: relative;
+            top: 0;
+        }
+
+        #dernier {
+            right: 0;
+        }
+    </style>
+    <ul id="essai_4">
+        <li id="premier"> 
+            <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+        </li>
+
+        <li id="deuxieme"> 
+            <div>
+                <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+            </div>
+        </li>
+
+        <li>
+            <div>
+                <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+            </div>
+
+        <li>
+            <div>
+                <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+            </div>
+        </li>
+
+        <li id="dernier"> 
+            <a id="actour" draggable="true" ondragstart="drag(event)" class="lien-appli" href="https://psud.nc/actour" target="_blank"><img src="http://psud.nc/sipbar/sipbar/SipUser/listeApplication/8a8186b06660d4f4016679eaa2df00b9/icon" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+        </li>
+    </ul>
+</body>
+</html>

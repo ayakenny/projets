@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+.ajout-nouvel-appli {
+  border-color: red;
+  border-style: solid;
+  border: 100px;
+}
+
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+  ev.currentTarget.className="ajout-nouvel-appli";
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="img/icone_menu.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+</body>
+</html>

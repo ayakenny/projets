@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Barre SIP</title>
+
+    <!-- Feuilles de styles CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/menu-appli.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/gestion-profil.css">
+
+    <!-- Script JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Choix du favicon -->
+    <link rel="shortcut icon" href="img/logo-province-sud-nc.png"/>
+</head>
+    <body>
+        <!-- Liste servant à l'affichage de la barre SIP -->
+        <ul class="barre-sip">
+          <!-- Bouton d'accès au menu d'applications -->
+          <li class="icone-menu">
+            <input onclick="menu_appli()" title="Accès aux applications" type="image" id="bouton-app" alt="bouton_menu" src="img/menu_hamburger.png"/>
+          </li>
+
+          <!-- Applis favorites -->
+          <li ondrop="drop(event)" ondragover="allowDrop(event)" class="element-favori" id="premiere-app-fav">
+            <div onclick="menu_appli()" class="zone-depot" title="Ajouter une application favorite">
+            </div>
+          </li>
+
+          <!-- Applis favorites -->
+          <li ondrop="drop(event)" ondragover="allowDrop(event)" class="element-favori">
+            <div onclick="menu_appli()" class="zone-depot" title="Ajouter une application favorite">
+            </div>
+          </li>
+
+          <!-- Applis favorites -->
+          <li ondrop="drop(event)" ondragover="allowDrop(event)" class="element-favori"> 
+            <div onclick="menu_appli()" class="zone-depot" title="Ajouter une application favorite">
+            </div>
+          </li>
+
+          <!-- Applis favorites -->
+          <li ondrop="drop(event)" ondragover="allowDrop(event)" class="element-favori">
+            <div onclick="menu_appli()" class="zone-depot" title="Ajouter une application favorite">
+            </div>
+          </li>
+          
+          <!-- Applis favorites -->
+          <li ondrop="drop(event)" ondragover="allowDrop(event)" class="element-favori">
+            <div onclick="menu_appli()" class="zone-depot" title="Ajouter une application favorite">
+            </div>
+          </li>
+          
+          <!-- Barre de recherche -->
+          <li class="search-bar" id="barre-de-recherche">
+            <input type="text" id="search-bar" name="search-bar">
+          </li>
+
+          <!-- Centre de notification -->
+          <li class="lien" id="notif">
+            <input type="image" id="bouton-notification" name="notification" title="Vos notifications" alt="cloche_de_notification" src="img/cloche_notification.png" onclick="centre_notification()"/>
+          </li>
+
+          <!-- Bouton de déconnexion -->
+          <li class="lien" id="deco"> 
+            <a class="image-lien" id="deconnexion" title="Se déconnecter" href="https://psud.nc" target="_blank"><img class="icone" src="img/deco.png" alt="bouton_deconnexion"/></a>
+          </li>
+          
+          <!-- Bouton d'accès au profil -->
+          <li class="lien" id="profil">
+            <input onclick="profil_agent()" title="Accès au profil" id="bouton-profil" class="icone" type="image" alt="bouton_profil" src="img/profil/profil.png"/>
+          </li>
+      </ul>
+
+      
+      <!-- div contenant l'affichage du menu des applications -->
+      <div id="menu-appli">
+        <!-- Croix de fermeture de l'onglet -->
+        <input onclick="menu_appli()" type="image" src="img/croix.png" id="croix-1" class="croix" alt="bouton_de_fermeture">
+
+        <div class="groupe">
+            <a id="exemple_1" draggable="true" ondragstart="drag(event)" onmousedown="apparition()" onmouseleave="suppression()" class="appli" href="https://psud.nc/actour" target="_blank"><img src="img/app/ACTOUR.png" alt="icone_appli" title="icone de l'application"/> ACTOUR</a>
+
+            <a id="exemple_2" draggable="true" ondragstart="drag(event)" onmousedown="apparition()" onmouseleave="suppression()" class="appli" href="https://psud.nc/geocat" target="_blank"><img src="img/app/CAT.png" alt="icone_appli" title="icone de l'application"/> CAT</a>
+
+            <a id="exemple_3" draggable="true" ondragstart="drag(event)" onmousedown="apparition()" onmouseleave="suppression()" class="appli" href="https://psud.nc/geocat" target="_blank"><img src="img/app/CAT.png" alt="icone_appli" title="icone de l'application"/> CAT</a>
+        </div>
+
+        <div class="groupe">
+            <a id="exemple_4" draggable="true" ondragstart="drag(event)" onmousedown="apparition()" onmouseleave="suppression()" class="appli" href="https://psud.nc/cartosud" target="_blank"><img src="img/app/CARTOSUD.png" alt="icone_appli" title="icone de l'application"/> CARTOSUD</a>
+
+            <a id="exemple_5" draggable="true" ondragstart="drag(event)" onmousedown="apparition()" onmouseleave="suppression()" class="appli" href="https://psud.nc/geocat" target="_blank"><img src="img/app/GEOCAT.png" alt="icone_appli" title="icone de l'application"/> GEOCAT</a>
+
+            <a id="exemple_6" draggable="true" ondragstart="drag(event)" onmousedown="apparition()" onmouseup="suppression()" class="appli" href="https://psud.nc/geocat" target="_blank"><img src="img/app/GEOCAT.png" alt="icone_appli" title="icone de l'application"/> GEOCAT</a>
+        </div>
+      </div>
+
+
+      <!-- Zone d'affichage des notifications -->
+      <div id="centre-notification">
+        <div class="notif">
+          <img src="img/app/ACTOUR.png" alt="icone_appli"/>
+
+          <p class="nom-appli">
+            ACTOUR
+          </p>
+
+          <div class="message">
+            Contenu de la notification
+          </div>
+
+          <input onclick="statut_notif(this.id)" id="1" class="lu" type="image" alt="checkmark" src="img/checkmark.png"/>
+
+          <input onclick="" id="1-1" class="aller-a" type="image" alt="flèche_de_redirection" src="img/fleche.png">
+        </div>
+
+        <div class="notif">
+          <img src="img/app/ACTOUR.png" alt="icone_appli"/>
+
+          <p class="nom-appli">
+            ACTOUR
+          </p>
+
+          <div class="message">
+            Contenu de la notification
+          </div>
+          
+          <input onclick="statut_notif(this.id)" id="2" class="lu" type="image" alt="checkmark" src="img/checkmark.png">
+
+          <input onclick="" id="2-2" class="aller-a" type="image" alt="flèche_de_redirection" src="img/fleche.png">
+        </div>
+
+        <div class="notif">
+          <img src="img/app/ACTOUR.png" alt="icone_appli"/>
+
+          <p class="nom-appli">
+            ACTOUR
+          </p>
+
+          <div class="message">
+            Contenu de la notification
+          </div>
+
+          <input onclick="statut_notif(this.id)" id="3" class="lu" type="image" alt="checkmark" src="img/checkmark.png">
+
+          <input id="3-3" class="aller-a" type="image" alt="flèche_de_redirection" src="img/fleche.png">
+        </div>
+      </div>
+
+      
+      <!-- div contenant la zone de gestion du profil de l'utilisateur -->
+      <div id="menu-profil">
+        <input onclick="profil_agent()" id="croix-2" class="icone croix" type="image" alt="bouton_de_fermeture" src="img/croix.png">
+
+        <div class="detail-agent">
+          <img id="image-profil" src="img/profil/profil.png" alt="Image_de_profil_agent"/>
+
+          <p id="nom-agent">Nom de l'agent</p>
+        </div>
+
+        <hr>
+
+        <!-- Groupe d'icônes d'applications pour l'agent connecté -->
+        <div class="groupe">
+            <a class="appli" href="https://psud.nc/zen/?view=planningAbsenceView" target="_blank"><img src="img/profil/ZEN-CONGE.png" alt="icone_appli" title="icone de l'application"/> Congé</a>
+
+            <a class="appli" href="https://psud.nc/zen/?view=documentsView" target="_blank"><img src="img/profil/ZEN-EAE.png" alt="icone_appli" title="icone de l'application"/> EAE</a>
+        </div>
+
+        <div class="groupe">
+            <a class="appli" href="https://psud.nc/zen/?view=eaeView" target="_blank"><img src="img/profil/ZEN-DOC.png" alt="icone_appli" title="icone de l'application"/> Document</a>
+
+            <a class="appli" href="https://psud.nc/zen/?view=planningAbsenceView" target="_blank"><img src="img/profil/ZEN-PLANNING.png" alt="icone_appli" title="icone de l'application"/> Planning</a>
+        </div>
+      </div>
+
+      <!-- Bouton servant à afficher la messagerie. La fonctionnalité sera développée plus tard -->
+      <input id="bouton-messagerie" title="Accès à la messagerie" type="image" alt="bouton_profil" src="img/bulle_messagerie.png">
+    </body>
+</html>

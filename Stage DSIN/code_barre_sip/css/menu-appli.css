@@ -1,0 +1,80 @@
+/* Cette page contient les éléments concernant le menu d'applications cliquable en haut à gauche de l'écran*/ 
+
+/* Div encadrant toutes les applications */
+#menu-appli {
+    margin: 0;
+    padding: 0;
+    padding-left: 1%;
+    border-radius: 0px 0px 17px 0px;
+    width:19%;
+    background-color: #d0e9f4;
+    
+    position: absolute;
+    left: -370px;
+    top: 5vh;
+
+    transition: transform 0.6s ease-in-out; /* Animation lors du clic */
+    overflow-x: hidden; /* Interdiction du scroll horizontal */
+    overflow-y: scroll; /* Autorisation du scroll vertical */  
+}
+
+
+/* Croix de fermeture du menu d'applications */
+#croix-1 {
+    width: 10%;
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+
+
+/* Au survol de la croix */
+.croix:hover {
+    border-style: solid;
+    border-radius: 50px;
+    border-color: white;
+
+    transform: rotate(90deg);
+    transition: transform 300ms ease-in-out;
+}
+
+
+/* Les applications sont rangés en deux colonnes qui s'appellent "goupe" */
+.groupe {
+    text-align:justify;
+    max-width: 48%;
+    display: inline-block;
+    margin: 1%;
+}
+
+
+/* Pour les applis du menu d'applications */
+.appli {
+    display: block;   /* Transformation en block */
+    min-width: 120px; /* Largeur minimale des liens */  
+
+    margin: 10%;
+    margin-top: 0.2rem;  /* Marges externes */
+    padding: 0.2rem;     /* Marges internes */
+    
+    font-size: large;
+    text-align: center;           /* Centrage du text */
+    background-color: #1784a2;  /* Arrière-plan */
+    color: #fff;        /* Couleur du texte */
+    text-decoration: none; /* Suppression du soulignement */
+
+    border: 2px solid #fff; /* Ajout d'une bordure */
+    border-radius: 4px;       /* Arrondis des bordures */
+    
+    transition: all 0.5s;  /* Ajout des effets de transition */
+}
+
+.appli:hover {
+    background-color: #845EC2;
+    color: white;
+    border-color: white;
+}
+
+.appli:visited {
+    color:white;
+}

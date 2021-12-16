@@ -1,0 +1,109 @@
+/* Cette page contient les éléments concernant le menu d'applications cliquable en haut à gauche de l'écran*/ 
+
+/* Div principale d'affichage des notifications */
+#centre-notification {
+    margin: 0;
+    width: 20%;
+    height: 50%;
+    background-color: #d0e9f4;
+    border-radius: 0px 0px 17px 17px;
+
+    position: absolute;
+    z-index: 0;
+    left: 67%;
+    top: -430px;
+    z-index: 100;
+
+    transition: transform 0.6s ease-in-out; /* Animation lors du clic */
+    overflow-x: hidden; /* Interdiction du scroll horizontal */
+    overflow-y: scroll; /* Autorisation du scroll vertical */  
+}
+
+
+/* Class de définition des notifications */
+.notif {
+    width: 95%;
+    height: 20%;
+    background-color: #845ec2;
+    border-radius: 17px;
+
+    margin-left: 2.5%;
+    margin-top: 3%;
+
+    position: relative;
+}
+
+
+/* Animation au hover d'une notification */
+.notif:hover{
+    border-style: solid;
+    border-color: white;
+}
+
+
+/* Ajustement du logo de l'application */
+.notif img {
+    width: 10%;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: white;
+    border-width: 2px;
+    padding: 0.5%;
+
+    position: absolute;
+    left: 5%;
+    top: 45%;
+}
+
+
+/* Ajustement du nom de l'application */
+.nom-appli {
+    font-size: 1.1em;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    left: 4%;
+    top: 10%;
+}
+
+
+/* Ajustement du message de la notification */
+.message {
+    width: 70%;
+    height: 50%;
+    color: white;
+
+    position: absolute;
+    top: 40%;
+    left: 17%;
+}
+
+
+/* Concerne le bouton d'accusé de lecture */
+.lu {
+    width: 8%;
+
+    position: absolute;
+    top: 8%;
+    right: 2%;
+}
+
+
+/* Concerne la flèche de redirection */
+.aller-a {
+    width: 8%;
+
+    position: absolute;
+    top: 55%;
+    right: 2%;
+}
+
+
+/* Animation lors d'un hover */
+.notif input:hover {
+    border-style: solid;
+    border-color: white;
+    border-radius: 50px;
+}
